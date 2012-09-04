@@ -1,0 +1,46 @@
+!!! 5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title= title
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js', data-dojo-config="parseOnLoad: true, async: true")
+    script(src='/javascripts/index.js')
+  body(class='claro')
+    #preLoader(data-dojo-id='preLoader')
+    div(data-dojo-type='dijit.layout.BorderContainer', style='width: 98%; height: 98%')
+      div(data-dojo-type='dijit.layout.ContentPane', data-dojo-props="region:'leading', splitter:true", style='width: 80%')
+        div(data-dojo-type='dijit.layout.TabContainer', style="width:100%; height:100%)
+          div(data-dojo-type='dijit.layout.ContentPane', data-dojo-props="title:'Thresholds'")
+            div(data-dojo-type='dijit.form.VerticalSlider', data-dojo-props="value: '6'", style='height:200px; float: left')
+              ol(data-dojo-type='dijit.form.VerticalRuleLabels', style="width:1.5em;font-size:75%;color:gray")
+                li 0%
+                li 20%
+                li 40%
+                li 60%
+                li 80%
+                li
+            div(data-dojo-type='dijit.form.VerticalSlider', data-dojo-props="value: '6'", style='height:200px; float: left')
+              ol(data-dojo-type='dijit.form.VerticalRuleLabels', style="width:1.5em;font-size:75%;color:gray")
+                li 0%
+                li 20%
+                li 40%
+                li 60%
+                li 80%
+                li
+            div(data-dojo-type='dijit.form.VerticalSlider', data-dojo-props="value: '6'", style='height:200px')
+              ol(data-dojo-type='dijit.form.VerticalRuleLabels', style="width:1.5em;font-size:75%;color:gray")
+                li 0%
+                li 20%
+                li 40%
+                li 60%
+                li 80%
+                li
+      div(data-dojo-type='dijit.layout.ContentPane', data-dojo-props="region:'center'", data-dojo-id='centerPane')
+        div(data-dojo-type='dijit.layout.TabContainer', style="width:100%; height:100%)
+          div(data-dojo-type='dijit.layout.ContentPane', data-dojo-props="title:'Main'")
+            p #{title}
+      div(data-dojo-type='dijit.layout.ContentPane', data-dojo-props="region:'bottom'", data-dojo-id='bottomPane')
+        div(class="left")
+        div(class="right", style='width: 1.8em; height: 1.8em')
+          object(data="http://www.w3.org/html/logo/downloads/HTML5_Badge.svg", type="image/svg+xml", style='width: 98%; height: 98%')
